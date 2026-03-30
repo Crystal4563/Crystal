@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal | Portfolio UI</title>
+    <style>
+        /* CONFIGURATION GÉNÉRALE */
+        body {
+            margin: 0;
+            padding: 0;
+            /* Ton image d'arrière-plan */
+            background: url('https://4kwallpapers.com/images/wallpapers/purple-aesthetic-2560x1440-17053.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* VOILE SOMBRE POUR LA LISIBILITÉ */
+        .overlay {
+            width: 100%;
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* STYLE DU TITRE */
+        h1 {
+            font-size: clamp(3rem, 10vw, 5rem); /* S'adapte à la taille de l'écran */
+            margin: 0;
+            color: #d182ff;
+            text-shadow: 0 0 30px rgba(209, 130, 255, 0.8);
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #efd5ff;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        /* CONTENEUR DES BOUTONS */
+        .button-group {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap; /* Pour mobile */
+            justify-content: center;
+        }
+
+        /* STYLE COMMUN DES BOUTONS */
+        .custom-btn {
+            text-decoration: none;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            min-width: 180px;
+        }
+
+        /* BOUTON PRÉSENTATION (Bleu-Violet) */
+        .btn-presentation {
+            background: linear-gradient(135deg, #4facfe 0%, #a944ff 100%);
+        }
+
+        .btn-presentation:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(79, 172, 254, 0.6);
+        }
+
+        /* BOUTON PORTFOLIO (Violet-Rose) */
+        .btn-portfolio {
+            background: linear-gradient(135deg, #a944ff 0%, #ff0844 100%);
+        }
+
+        .btn-portfolio:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 8, 68, 0.6);
+        }
+
+        /* PETITE ANIMATION D'ENTRÉE */
+        .overlay > * {
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <h1>CRYSTAL</h1>
+        <p>UI/UX DESIGNER ROBLOX</p>
+        
+        <div class="button-group">
+            <a href="#presentation" class="custom-btn btn-presentation">
+                Présentation
+            </a>
+
+            <a href="#portfolio" class="custom-btn btn-portfolio">
+                Portfolio
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
